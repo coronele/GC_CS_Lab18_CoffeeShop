@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "Register User";
+}
+
+<h1>Register User</h1>
+<form action="../Register/RegWelcome" method="post">
+    <div class="row">
+        <div class="col-lg-6">
+            <label>
+                Enter your username:
+            </label>
+            <input type="text" name="username" placeholder="NewUsername" required />
+        </div>
+        <div class="col-lg-6">
+            <label>
+                Enter new password:
+            </label>
+            <input type="password" name="password" min="2" placeholder="********" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <label>
+                Enter your email address:
+            </label>
+            <input type="text" name="email" placeholder="youremail@domain.com" />
+        </div>
+        <div class="col-lg-4">
+            <label>
+                Email type
+            </label>
+            <select name="emailtype">
+                <option value="work">Work</option>
+                <option value="home">Home</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+    </div>
+    <label>
+        How much do you love GC Coffee?
+    </label>
+    <div>
+        0 <input type="range" min="0" max="10" step="1" name="gccoffeelove" /> 10
+    </div>
+    <div>
+        <input type="submit" value="Create new user" />
+    </div>
+</form>
+
