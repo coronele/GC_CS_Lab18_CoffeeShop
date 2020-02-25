@@ -17,8 +17,12 @@ namespace GC_CS_Lab18_CoffeeShop.Controllers
         [HttpGet]
         public IActionResult RegUser()
         {
-            return View();
+            return View(new RegisterUser());
         }
+        // RegUser passes back blank RegisterUser on initial load of form.
+        // If server side validation (@model) fails, this will reload any previously entered data
+        // Requires value defined in input type - i.e. value="@Model.UserName
+
 
         /*
         [HttpPost]

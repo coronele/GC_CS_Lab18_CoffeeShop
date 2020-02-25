@@ -3,6 +3,8 @@
     ViewData["Title"] = "Register User";
 }
 
+@model RegisterUser
+
 <h1>Register User</h1>
 <form action="../Register/RegWelcome" method="post">
     <div class="row">
@@ -10,7 +12,7 @@
             <label>
                 Enter your username:
             </label>
-            <input type="text" name="username" placeholder="NewUsername" required />
+            <input type="text" name="username" placeholder="NewUsername" required value="@Model.UserName"/>
         </div>
         <div class="col-lg-6">
             <label>
